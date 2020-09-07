@@ -1,0 +1,135 @@
+:root{
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo a{
+  display:inline-flex;
+  max-width: 50px;
+}
+.logo a img{
+  width:10%;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #b3ecff;
+  z-index: 1;
+  }
+.navbar a{
+  text-decoration: none;
+}
+li{
+  display: inline;
+}
+.navbar-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.nav-icon {
+  font-size: 1.5rem;
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.cart-items {
+  position: absolute;
+  top: -15px;
+  right: -8px;
+  background: #c1f0c1;
+  padding: 0 3px;
+  border-radius: 30%;
+  color: #fff;;
+}
+/*#products-images{
+  width: 100%;
+  height: 1000vh;
+  display: flex;
+}*/
+ .image-container{
+   width: 100%;
+   max-width: 120rem;
+   margin: auto;
+   padding: 0 1.5rem;
+ }
+ .image-gallery{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr ;
+   grid-template-rows: auto;
+   gap: 1.5rem;
+   grid-template-areas: "image-1  image-2 image-3 image-4 image-5";
+ }
+ .image-gallery a{
+   width: 100%;
+   height: 25rem;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center ;
+ }
+ .image-gallery a i{
+   font-size: 3rem;
+   position: relative;
+   z-index: 100;
+   padding: 1rem 3rem;
+   border: 2px solid rgba(255, 255, 255, .6);
+   border-radius: .4rem;
+   /*opacity: 0;*/
+   transition: 0.5s;
+ }
+ .image-gallery a::before{
+   content:'' ;
+   position: absolute;
+   width: 100%; 
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, .8);
+   opacity: 0;
+   transition: .5s;
+ }
+ .image-gallery a:hover i,
+ .image-gallery a :hover::before{
+   opacity: 1;
+ }
+ .image-1{
+   grid-area: "image-1";
+   background-image: url("/Images/IMG_20200823_174729_resized_20200826_090752265.jpg");
+
+ }
+ .image-2{
+  grid-area: "image-2";
+  background-image: url("/Images/IMG_20200823_174825_resized_20200826_090751423.jpg");
+
+}
+.image-3{
+  grid-area: "image-3";
+  background-image: url("/Images/IMG_20200823_174951_resized_20200826_090750447.jpg");
+
+}
+.image-4{
+  grid-area: "image-4";
+  background-image: url("/Images/IMG_20200808_223048_796.jpg");
+
+}
+.image-5{
+  grid-area: "image-5";
+  background-image: url("/Images/IMG_0987.jpg");
+
+}
